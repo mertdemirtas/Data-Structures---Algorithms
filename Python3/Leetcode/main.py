@@ -1,26 +1,5 @@
 # MARK: Dynamic Programming
 from typing import List
-
-class NthTribonacciNumber:
-    def __init__(self):
-        n = 25
-        print(self.__tribonacci(n))
-
-    def __tribonacci(self, n: int) -> int:
-        return self.__tribonacci_helper(n)
-
-    def __tribonacci_helper(self, n: int, memo = {}):
-        if n in memo: return memo[n]
-        if n == 0: return 0
-        if n <= 2: return 1
-
-        memo[n] = self.__tribonacci_helper(n - 1) + self.__tribonacci_helper(n - 2) + self.__tribonacci_helper(n - 3)
-
-        return memo[n]
-
-    def run(self, n: int):
-        self.__tribonacci(n)
-
 class MinCostClimbingStairs:
 
     def __init__(self):
