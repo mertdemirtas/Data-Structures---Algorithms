@@ -1,6 +1,6 @@
 from typing import List
 
-# Dynamic Programming - Memoization Approach
+# Dynamic Programming - Memoization Approach - Time Complexity: O(n*n), Space Complexity: O(n) + O(n)
 class Memoization:
     def canJump(self, nums: List[int]) -> bool:
         if len(nums) == 1:
@@ -22,7 +22,7 @@ class Memoization:
               return memo[index]
         return memo[index]
 
-# Greedy Approach
+# Greedy Approach - Time Complexity: O(n), Space Complexity: O(1)
 class Greedy:
     def canJump(self, nums: List[int]) -> bool:
         goal = len(nums) - 1
