@@ -1,23 +1,5 @@
 # MARK: Dynamic Programming
 from typing import List
-class MinCostClimbingStairs:
-
-    def __init__(self):
-        arr = [1,100,1,1,1,100,1,1,100,1]
-        print("Min cost to reach the top of stairs:", self.__min_cost_climbing_stairs(arr))
-
-    def __min_cost_climbing_stairs(self, cost: []) -> int:
-        return min(self.__min_cost_climbing_stairs_helper(cost, len(cost) - 1), self.__min_cost_climbing_stairs_helper(cost, len(cost) - 2))
-
-    def __min_cost_climbing_stairs_helper(self, cost: [], n, memo = {}):
-        if n in memo: return memo[n]
-        if n < 0: return 0
-
-        memo[n] = cost[n] + min(self.__min_cost_climbing_stairs_helper(cost, n - 1, memo), self.__min_cost_climbing_stairs_helper(cost, n - 2, memo))
-        return memo[n]
-
-    def run(self, arr: []):
-        print("Min cost to reach the top of stairs:", self.__min_cost_climbing_stairs(arr))
 
 class HouseRobber:
     def __init__(self):
